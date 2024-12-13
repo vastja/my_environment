@@ -1,0 +1,17 @@
+# Go to directory using fuzzy finder
+function gd {
+    param (
+        [Alias("d")]
+        [string]$Directory = "."
+    )
+    Get-ChildItem -Path $Directory -Directory -Recurse | ForEach-Object { $_.FullName } | fzf | cd
+}
+
+# Find file with fuzzy finder and edit it with nvim
+function ef {
+    param (
+        [Alias("d")]
+        [string]$Directory = "."
+    )
+    nvim $(Get-ChildItem -Path $Directory -File -Recurse | ForEach-Object { $_.FullName } | fzf)
+}
