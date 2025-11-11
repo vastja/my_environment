@@ -1,0 +1,46 @@
+{
+
+  "workbench.colorCustomizations": {
+    "peekView.border": "#ffaa00",
+  },
+
+  // --- vim ---
+  "vim.leader": " ",
+  "editor.lineNumbers": "relative",
+  "vim.useSystemClipboard": true,
+  
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "s", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["g", "I"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["<C-o>"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["<C-i>"],
+      "commands": ["workbench.action.navigateForward"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
+    }
+  ],
+  "workbench.colorTheme": "Tokyo Night Storm"
+}
